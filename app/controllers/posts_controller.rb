@@ -9,8 +9,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
+
   def show
-    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+    @post = Post.where(@user)
     respond_to do |format|
       format.html { render :show }
       format.json { @post.to_json }
