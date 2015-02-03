@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   resources :users, :only => [:index] do
   resources :posts
 end
+
+#since posts belongs to users, nesting it under user and since the path needs to hit
+#users first before path. See hmwk for routing.
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
