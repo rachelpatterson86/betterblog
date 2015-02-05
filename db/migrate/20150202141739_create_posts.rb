@@ -8,5 +8,3 @@ class CreatePosts < ActiveRecord::Migration
     end
   end
 end
-
-#rails g model posts user_id:references
